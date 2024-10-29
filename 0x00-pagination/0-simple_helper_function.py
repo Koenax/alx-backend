@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
-"""
-Main file
-"""
+"""index_range function"""
 
-index_range = __import__('0-simple_helper_function').index_range
 
-res = index_range(1, 7)
-print(type(res))
-print(res)
-
-res = index_range(page=3, page_size=15)
-print(type(res))
-print(res)
+def index_range(page: int, page_size: int) -> tuple:
+    """return a tuple of size two containing a start index and an end index"""
+    start = (page - 1) * page_size
+    return (start, start + page_size)
